@@ -35,7 +35,7 @@ resource "google_compute_firewall" "vpcf" {
 resource "google_compute_instance_template" "tmp1" {
   name = "rajyalakshmi-mig-tmp"
   machine_type            = "f1-micro"
-  metadata_startup_script = file("wp.sh")
+  metadata_startup_script = file("wordpress.sh")
   region                  = "us-central1"
   tags = [ "http-server","http","https","allow-iap-ssh","allow-http"]
 
